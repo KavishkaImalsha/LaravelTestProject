@@ -11,3 +11,5 @@ Route::get('/user', function (Request $request) {
 Route::post('/add-product', [ProductController::class, 'store']);
 
 Route::get('/get-products', [ProductController::class, 'getProducts']);
+
+Route::delete('/delete-product/{id}', [ProductController::class, 'deleteProduct']);

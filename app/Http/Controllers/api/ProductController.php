@@ -47,6 +47,14 @@ class ProductController extends Controller
         ]);
     }
 
+    public function deleteProduct($id){
+        $product = Product::find($id);
+        $product->delete();
+        return response()->json([
+            "message" => "Succesfully Deleted"
+        ]);
+    }
+
     /**
      * Display the specified resource.
      */
